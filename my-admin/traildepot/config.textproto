@@ -9,3 +9,34 @@ auth {
   refresh_token_ttl_sec: 2592000
 }
 jobs {}
+record_apis: [{
+  name: "customers"
+  table_name: "customers"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+  acl_authenticated: [CREATE, DELETE, READ, UPDATE]
+}, {
+  name: "maintenance_records"
+  table_name: "maintenance_records"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+  acl_authenticated: [CREATE, READ, DELETE, UPDATE]
+}, {
+  name: "payments"
+  table_name: "payments"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+  acl_authenticated: [DELETE, UPDATE, READ, CREATE]
+}, {
+  name: "rentals"
+  table_name: "rentals"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+  acl_authenticated: [DELETE, UPDATE, READ, CREATE]
+}, {
+  name: "vehicle_categories"
+  table_name: "vehicle_categories"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+  acl_authenticated: [DELETE, UPDATE, READ, CREATE]
+}, {
+  name: "vehicles"
+  table_name: "vehicles"
+  acl_world: [CREATE, READ, UPDATE, DELETE]
+  acl_authenticated: [DELETE, UPDATE, CREATE, READ]
+}]
