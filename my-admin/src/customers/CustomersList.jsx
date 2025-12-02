@@ -1,7 +1,13 @@
-import { BooleanField, DataTable, DateField, EmailField, List } from 'react-admin';
+import { BooleanField, DataTable, DateField, EmailField, List, TextInput, SearchInput } from 'react-admin';
+
+const CustomersFilter = [
+    <SearchInput source='q' alwaysOn />,
+    <TextInput label='Customer Number' source='customer_number'/>,
+    <TextInput label='Drivers License' source='drivers_license'/>,
+];
 
 export const CustomersList = () => (
-    <List>
+    <List filters={CustomersFilter}>
         <DataTable>
             <DataTable.Col source="id" />
             <DataTable.Col source="customer_number" />

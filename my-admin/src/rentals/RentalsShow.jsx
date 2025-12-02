@@ -8,13 +8,13 @@ export const RentalsShow = () => (
             <TextField source="rental_number" />
             <ReferenceField source="customer_id" reference="customers" />
             <ReferenceField source="vehicle_id" reference="vehicles" />
-            <DateField source="start_date" />
-            <DateField source="end_date" />
+            <TextField source="start_date" />
+            <TextField source="end_date" />
             </TabbedShowLayout.Tab>
 
             <TabbedShowLayout.Tab label='Details'>
-            <DateField source="actual_return_date" />
-            <DateField source="created_at" />
+            <TextField source="actual_return_date" />
+            <TextField source="created_at" />
             <NumberField source="daily_rate" />
             <NumberField source="deposit_paid" />
             <TextField source="notes" />
